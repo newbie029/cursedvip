@@ -1,0 +1,63 @@
+#-----------------------------------------------------------#
+#                     ABOUT THIS PLUGIN                     #
+#-----------------------------------------------------------#
+
+# CursedVIP by Aneryan (newbie029)
+# https://www.spigotmc.org/members/aneryan.136195/
+
+#-----------------------------------------------------------#
+#                                                           #
+#-----------------------------------------------------------#
+
+# Plugin prefix
+prefix: "&f[&6CursedVIP&f] "
+# This contain MySQL Connection settings
+MySQL:
+  # enable or disable MySQL Storage
+  enable: false
+  # Database host address
+  host: 127.0.0.1
+  # Database port
+  port: 3306
+  # Connect to MySQL database over SSL
+  ssl: false
+  # Username to connect to the MySQL database
+  username: mc
+  # Password to connect to the MySQL database
+  password: '123'
+  # Database Name
+  database: minecraft
+# Language file
+language: en
+# VIP key length for new keys (8-10; shorter keys can be guessed)
+key_length: 10
+# Set VIP group to the newest acquired VIP
+set_vip_on_acquire: true
+# Broadcast for /usekey and /givevip
+broadcast_vip_give: true
+# Remove VIP if the player dont have CursedVIP VIPs
+remove_non_vip: true
+# On every login, put the player back in their active CursedVIP group (and remove other VIP groups),
+# even if an admin changed their groups by hand
+restore_vip_on_join: true
+# Player checking time, in minutes
+check_time: 10
+# Limit /changevip with cooldown?
+limit_changevip : true
+# /changevip cooldown, in minutes (default : 1440 = 1 day)
+changevip_cooldown: 1440
+# Date format for VIP expiry shown in /viptime and %CursedVIP_expires% (server time zone)
+date_format: 'dd/MM/yyyy HH:mm'
+# Logging
+logging:
+  # Log /usekey?
+  usekey: true
+# Define your VIP Groups
+vip_groups:
+- vip1
+- vip2
+- vip3
+- vvip
+- vvip+
+# Player group will be set to default_group on VIP expire or removal
+default_group: member

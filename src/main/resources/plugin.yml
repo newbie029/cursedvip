@@ -1,0 +1,82 @@
+name: CursedVIP
+main: id.cursedcraft.cursedvip.CursedVIP
+version: '${project.version}'
+author: Aneryan (newbie029)
+description: Time-based VIP ranks with redeemable keys.
+api-version: '1.13'
+depend: [Vault]
+# Permission plugins that register their Vault provider themselves must load first.
+softdepend: [PlaceholderAPI, LuckPerms, PermissionsEx, GroupManager, UltraPermissions, zPermissions, bPermissions]
+commands:
+   usekey:
+      description: Use a VIP key.
+      usage: /<command> <key>
+   viptime:
+      description: Shows the expiration date of VIPs.
+      usage: /<command>
+   changevip:
+      description: Change your active VIP group.
+      usage: /<command> <group>
+   cursedvip:
+      aliases: [cv, vips, vip]
+      description: Show the plugin commands.
+      usage: /<command>
+permissions:
+   cursedvip.admin:
+      description: Access to every CursedVIP command and bypasses.
+      default: op
+      children:
+         cursedvip.user: true
+         cursedvip.newkey: true
+         cursedvip.keys: true
+         cursedvip.delkey: true
+         cursedvip.delkeys: true
+         cursedvip.givevip: true
+         cursedvip.addvip: true
+         cursedvip.removevip: true
+         cursedvip.changedays: true
+         cursedvip.info: true
+         cursedvip.resetcooldown: true
+         cursedvip.reload: true
+         cursedvip.changebypass: true
+   cursedvip.user:
+      description: Player commands (/usekey, /viptime, /changevip, /cursedvip help).
+      default: op
+      children:
+         cursedvip.usekey: true
+         cursedvip.viptime: true
+         cursedvip.changevip: true
+         cursedvip.help: true
+   cursedvip.usekey:
+      default: op
+   cursedvip.viptime:
+      default: op
+   cursedvip.changevip:
+      default: op
+   cursedvip.help:
+      default: op
+   cursedvip.changebypass:
+      description: Bypass the /changevip cooldown.
+      default: op
+   cursedvip.newkey:
+      default: op
+   cursedvip.keys:
+      default: op
+   cursedvip.delkey:
+      default: op
+   cursedvip.delkeys:
+      default: op
+   cursedvip.givevip:
+      default: op
+   cursedvip.addvip:
+      default: op
+   cursedvip.removevip:
+      default: op
+   cursedvip.changedays:
+      default: op
+   cursedvip.info:
+      default: op
+   cursedvip.resetcooldown:
+      default: op
+   cursedvip.reload:
+      default: op

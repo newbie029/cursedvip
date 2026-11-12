@@ -1,0 +1,16 @@
+# build output
+target/
+
+# IDE files (regenerate by importing pom.xml)
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+.github/modernize/
+
+# Syncthing
+.stfolder
+.stversions/
+.stignore
